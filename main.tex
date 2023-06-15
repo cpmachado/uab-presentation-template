@@ -1,0 +1,48 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{csquotes}
+\usepackage[citestyle=authoryear, sorting=nty]{biblatex}
+\usepackage[ddmmyyyy]{datetime}
+\usepackage{hyperref}
+
+\usetheme{Marburg}
+\addbibresource{./bibliografia.bib}
+
+% Dados
+\newcommand{\nroAluno}{000000}
+\title{Título}
+\author{Anonymous}
+\institute{Universidade Aberta}
+\date{\today}
+
+\titlegraphic{\includegraphics[width=0.5\textwidth]{./images/logo_UAb_azul-300x85.png}}
+
+\hypersetup{
+	pdftitle={\@title},
+	pdfsubject={\@title},
+	pdfauthor={\@author},
+	pdfkeywords={\@title}
+}
+
+\begin{document}
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}
+	\frametitle{Referências}
+	\nocite{uabpresentationtemplate}
+	\printbibliography[heading=bibnumbered]
+\end{frame}
+
+\begin{frame}
+	\frametitle{Contactos}
+	\section{Contactos}
+	\begin{itemize}
+		\item e-mail:
+			\href{mailto:\nroAluno @estudante.uab.pt}{\nroAluno @estudante.uab.pt}
+	\end{itemize}
+\end{frame}
+\end{document}
