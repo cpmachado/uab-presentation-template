@@ -9,6 +9,7 @@ all:
 
 clean:
 	$(foreach file,${SRC}, ${LATEX_CLEAN} ${file};)
+	rm -rf *.bbl *.nav *.pdf *.run.xml *.snm
 
 watch:
 	${LATEX_WATCH} ${MAIN}
